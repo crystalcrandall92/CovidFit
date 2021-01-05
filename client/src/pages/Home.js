@@ -5,6 +5,7 @@ import Covidcont from "../components/covidcont/covidcont";
 import Contcard from "../components/container/container";
 import "../components/css/styles.css";
 import API from "../utils/API";
+import "../components/css/fonts.css";
 
 
 class Home extends Component {

@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Header from "../components/Header/Header";
 import Nav from "../components/Nav/Nav";
-import API from '../utils/API'
+import API from '../utils/API';
+import "../components/css/styles.css";
+import SearchField from "../components/SearchField/SearchField";
 
 class Nutrition extends Component {
   state = {
@@ -27,6 +29,7 @@ class Nutrition extends Component {
       <div>
         <Nav />
         <Header />
+        <SearchField />
       </div>
     )
   }
