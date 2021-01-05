@@ -2,8 +2,9 @@
     background-color: slategray;
     padding: 30px;
     text-align: center;
-    font-size: 35px;
+    font-size: 80px;
     color: white;
+    font-family: 'Lobster', cursive;
   }
 
   .center {
@@ -27,4 +28,23 @@
       background-image: url("./covidimg1.jpg");
       background-size: cover;
       height: 100vh;
+  }
+
+  p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+  }
+
+  .homebox {
+    padding: 20px;
+  }
+
+  .homechartbox {
+    padding: 20px;
+  }
+
+  #search {
+    margin: 15px 0px 15px 0px;
+    width: 200px;
   }
