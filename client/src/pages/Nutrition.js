@@ -36,9 +36,7 @@ class Nutrition extends Component {
       <div className="healthyFood">
         <Nav />
         <Header />
-        <SearchField />
-        
-        
+        <SearchField className="centerform" search={this.state.search} handleFormSubmit={this.handleFormSubmit} />
       </div>
     )
   }
