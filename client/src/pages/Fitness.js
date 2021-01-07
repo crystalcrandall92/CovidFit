@@ -11,10 +11,10 @@ class Fitness extends Component {
     savedList: []
   }
   
-  componentDidMount() {
-    API.savedList()
-    .then(savedList => this.setState({ savedList: savedList }))
-  }
+  //componentDidMount() {
+  //  API.savedList()
+  //  .then(savedList => this.setState({ savedList: savedList }))
+  //}
   
   render() {
     return (
