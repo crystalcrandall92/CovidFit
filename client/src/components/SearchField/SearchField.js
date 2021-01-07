@@ -7,7 +7,6 @@ function SearchField(props) {
             <form>
                 <div className="form-group">
                     <input
-                        onChange={props.handleInputChange}
                         size="sm"
                         value={props.search || ""}
                         name="search"
