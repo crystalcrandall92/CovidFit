@@ -52,3 +52,27 @@
   .centerform {
     background-color: white;
   }
+
+  .signupbg {
+    background-image: url("./signupbg.jpg");
+      background-size: cover;
+      height: 100vh;
+  }
+
+  .signinbg {
+    background-image: url("./signinbg.png");
+      background-size: cover;
+      height: 100vh;
+  }
+
+  .naturerun {
+    background-image: url("./naturerun.jpg");
+      background-size: cover;
+      height: 100vh;
+  }
+
+  .healthyFood {
+    background-image: url("./healthyFood.jpg");
+      background-size: cover;
+      height: 100vh;
+  }

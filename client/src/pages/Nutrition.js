@@ -33,7 +33,7 @@ class Nutrition extends Component {
 
   render() {
     return (
-      <div>
+      <div className="healthyFood">
         <Nav />
         <Header />
         <SearchField className="centerform" search={this.state.search} handleFormSubmit={this.handleFormSubmit} />
