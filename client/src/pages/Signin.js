@@ -32,7 +32,7 @@ class LogIn extends React.Component {
 	render() {
 		const { email, password } = this.state.fields
 		return (
-			<div className='LogIn'>
+			<div className='signinbg'>
         <Nav />
           <Header />
 				<div className='row'>
