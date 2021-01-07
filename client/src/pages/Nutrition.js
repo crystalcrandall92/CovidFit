@@ -33,11 +33,11 @@ class Nutrition extends Component {
 
   render() {
     return (
-      <div>
+      <div className="healthyFood">
         <Nav />
         <Header />
-        <SearchField className="centerform" search={this.state.search} handleFormSubmit={this.handleFormSubmit} />
-        <img src={process.env.PUBLIC_URL + "/images/healthyFood.jpg"} position="fixed" width="100%" height="100%" />
+        <SearchField />
+        
         
       </div>
     )
