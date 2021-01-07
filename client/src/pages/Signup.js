@@ -32,7 +32,7 @@ class SignUp extends React.Component {
 	render() {
 		const { name, email, password } = this.state.fields
 		return (
-			<div className='SignUp'>
+			<div className='signupbg'>
         <Nav />
           <Header />
 				<div className='row'>
