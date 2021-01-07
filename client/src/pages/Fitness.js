@@ -5,6 +5,7 @@ import Nav from "../components/Nav/Nav";
 import API from "../utils/API";
 //import SearchContainer from "../components/SearchContainer";
 
+
 class Fitness extends Component {
   state = {
     savedList: []
@@ -18,10 +19,9 @@ class Fitness extends Component {
   render() {
     return (
       <div>
-      <Nav />
-      <Header />
-      <h1>Your saved items to calorie count.</h1>
-      
+        <Nav />
+        <Header />
+        <img src={process.env.PUBLIC_URL + "images/naturerun.jpg"} position= "fixed" width="100%" height="100%" background-size="cover" backgournd-position="center" alt="fitness" />
       </div>
     )
   }
