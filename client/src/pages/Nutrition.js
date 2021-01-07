@@ -37,8 +37,6 @@ class Nutrition extends Component {
         <Nav />
         <Header />
         <SearchField className="centerform" search={this.state.search} handleFormSubmit={this.handleFormSubmit} />
-        <img src={process.env.PUBLIC_URL + "/images/healthyFood.jpg"} position="fixed" width="100%" height="100%" />
-        
       </div>
     )
   }
