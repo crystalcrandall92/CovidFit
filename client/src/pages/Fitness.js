@@ -2,7 +2,7 @@ import "../components/css/styles.css";
 import React, { Component } from "react";
 import Header from "../components/Header/Header";
 import Nav from "../components/Nav/Nav";
-import API from "../utils/API";
+//import API from "../utils/API";
 //import SearchContainer from "../components/SearchContainer";
 
 

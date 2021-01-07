@@ -1,12 +1,11 @@
 import React from "react";
 
 function SearchContainer(props) {
-
     return (
         <div>
             <div>
                 <h1>Results:</h1>
-                {props.searchQuery.map((result, i) => (
+                    {props.searchQuery.map((result, i) => (
                     <div className="card" key={i + "-search"}>
                         <div className="row">
                             <div className="col-md-2 center">
