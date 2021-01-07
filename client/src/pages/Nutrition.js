@@ -7,8 +7,8 @@ import SearchField from "../components/SearchField/SearchField";
 
 class Nutrition extends Component {
   state = {
-    foodName: "",
-    title: []
+    input: "",
+    foods: []
   }
 
   componentDidMount() {
@@ -19,9 +19,16 @@ class Nutrition extends Component {
     try {
       const res = await API.getFood(term)
       console.log(res)
+      this.setState({
+        foods: res.data.items.map(saveData => this.createList(saveData.volumeInfo))
+      })
     } catch (error) {
       console.log(error)
     }
+  }
+
+  handleFormSubmit = e => {
+    this.setState({ [e.target.name]: e.target.value });
   }
 
   render() {
@@ -29,7 +36,7 @@ class Nutrition extends Component {
       <div>
         <Nav />
         <Header />
-        <SearchField />
+        <SearchField className="centerform" search={this.state.search} handleFormSubmit={this.handleFormSubmit} />
         <img src={process.env.PUBLIC_URL + "/images/healthyFood.jpg"} position="fixed" width="100%" height="100%" />
         
       </div>
