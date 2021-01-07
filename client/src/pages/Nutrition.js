@@ -29,8 +29,9 @@ class Nutrition extends Component {
       <div>
         <Nav />
         <Header />
+        <SearchField />
         <img src={process.env.PUBLIC_URL + "/images/healthyFood.jpg"} position="fixed" width="100%" height="100%" />
-        <SearchField /
+        
       </div>
     )
   }
