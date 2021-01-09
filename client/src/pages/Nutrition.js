@@ -7,28 +7,52 @@ import SearchField from "../components/SearchField/SearchField";
 
 class Nutrition extends Component {
   state = {
-    input: "",
-    foods: []
+    value: "",
+    foods: [],
+    basics: []
   }
 
   componentDidMount() {
     this.foodSearch('peanut butter')
   }
 
-  foodSearch = async (term) => {
+  foodSearch = async search => {
     try {
-      const res = await API.getFood(term)
+      const res = await API.getFood(search)
       console.log(res)
       this.setState({
-        foods: res.data.items.map(saveData => this.createList(saveData.volumeInfo))
-      })
+        foods: res.data.branded.map(searchedFood => this.createFood(searchedFood)),
+        basics: res.data.common.map(searchedFood => this.createFood(searchedFood)),
+      },
+      console.log(this))
     } catch (error) {
       console.log(error)
+      console.log(this)
     }
   }
 
-  handleFormSubmit = e => {
+  createFood = (searchedFood) => ({
+    Brand: searchedFood.brand_name,
+    Name: searchedFood.food_name,
+    "Serving Size": searchedFood.serving_qty + " " + searchedFood.serving_unit,
+    Calories: searchedFood.nf_calories,
+    Photo: searchedFood.photo ? searchedFood.photo.thumb : undefined
+  })
+
+  handleInputChange = e =>
     this.setState({ [e.target.name]: e.target.value });
+
+  handleFormSubmit = e => {
+    e.preventDefault();
+    this.foodSearch(this.state.search);
+  };
+
+  handleSavedFood = async food => {
+    try {
+      await API.saveFood(food)
+    } catch (error) {
+      console.warn(error)
+    }
   }
 
   render() {
@@ -36,7 +60,10 @@ class Nutrition extends Component {
       <div className="healthyFood">
         <Nav />
         <Header />
-        <SearchField className="centerform" search={this.state.search} handleFormSubmit={this.handleFormSubmit} />
+        <SearchField className="centerform" search={this.state.search}
+          handleInputChange={this.handleInputChange}
+          handleFormSubmit={this.handleFormSubmit} />
+        <FoodContainer foods={this.state.foods} basics={this.state.basics} action={this.handleSavedFood} method="Save" />
       </div>
     )
   }
