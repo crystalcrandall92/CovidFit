@@ -9,11 +9,12 @@ function SearchField(props) {
                     <input
                         size="sm"
                         value={props.search || ""}
+                        onChange={props.handleInputChange}
                         name="search"
                         type="text"
                         placeholder="Search for nutritional info!"
                         id="search"></input>
-                <button onclick={props.handleFormSubmit} className="btn btn-info float">Search</button>
+                <button onClick={props.handleFormSubmit} className="btn btn-info float">Search</button>
                 </div>
             </form>
         </div>

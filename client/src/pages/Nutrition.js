@@ -4,6 +4,7 @@ import Nav from "../components/Nav/Nav";
 import API from '../utils/API';
 import "../components/css/styles.css";
 import SearchField from "../components/SearchField/SearchField";
+import SearchContainer from "../components/SearchContainer/SearchContainer";
 
 class Nutrition extends Component {
   state = {
@@ -63,7 +64,7 @@ class Nutrition extends Component {
         <SearchField className="centerform" search={this.state.search}
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit} />
-        <FoodContainer foods={this.state.foods} basics={this.state.basics} action={this.handleSavedFood} method="Save" />
+        <SearchContainer foods={this.state.foods} action={this.handleSavedFood} method="Save" />
       </div>
     )
   }
