@@ -2,8 +2,9 @@
     background-color: slategray;
     padding: 30px;
     text-align: center;
-    font-size: 35px;
+    font-size: 80px;
     color: white;
+    font-family: 'Lobster', cursive;
   }
 
   .center {
@@ -25,6 +26,52 @@
 
   .background {
       background-image: url("./covidimg1.jpg");
+      background-size: cover;
+      height: 100vh;
+  }
+
+  p {
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Lora', serif;
+  }
+
+  .homebox {
+    padding: 20px;
+  }
+
+  .homechartbox {
+    padding: 20px;
+  }
+
+  #search {
+    width: 250px;
+  }
+
+  .centerform {
+    background-color: white;
+  }
+
+  .signupbg {
+    background-image: url("./signupbg.jpg");
+      background-size: cover;
+      height: 100vh;
+  }
+
+  .signinbg {
+    background-image: url("./signinbg.png");
+      background-size: cover;
+      height: 100vh;
+  }
+
+  .naturerun {
+    background-image: url("./naturerun.jpg");
+      background-size: cover;
+      height: 100vh;
+  }
+
+  .healthyFood {
+    background-image: url("./healthyFood.jpg");
       background-size: cover;
       height: 100vh;
   }

@@ -11,5 +11,13 @@ export default {
         'x-app-key': process.env.REACT_APP_X_APP_KEY,
       }
     })
+  },
+  saveFood: function (saveData) {
+    return axios.get("/api/saved", saveData)
+    .then(result => result.data);
+  },
+  savedFoods: function () {
+    return axios.get("/api/saved")
+    .then(result => result.data);
   }
 };
