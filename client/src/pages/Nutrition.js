@@ -35,7 +35,7 @@ class Nutrition extends Component {
   createFood = (searchedFood) => ({
     Brand: searchedFood.brand_name,
     Name: searchedFood.food_name,
-    "Serving Size": searchedFood.serving_qty + " " + searchedFood.serving_unit,
+    ServingSize: searchedFood.serving_qty + " " + searchedFood.serving_unit,
     Calories: searchedFood.nf_calories,
     Photo: searchedFood.photo ? searchedFood.photo.thumb : undefined
   })

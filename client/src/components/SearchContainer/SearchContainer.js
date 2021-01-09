@@ -16,7 +16,9 @@ function SearchContainer(props) {
                             <div className="card-body">
                                 <div>
                                     <h5 className="card-title">{result.Name}</h5>
+                                    <p>Brand: {result.Brand}</p>
                                     <p className="card-text">Calories: {result.Calories}</p>
+                                    <p>Serving Size: {result.ServingSize}</p>
                                 </div>
                             </div>
                         </div>
