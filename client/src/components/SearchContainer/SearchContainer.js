@@ -1,7 +1,7 @@
 import React from "react";
 
 function SearchContainer(props) {
-    console.log(JSON.stringify(props) + "this is props")
+
     return (
         <div className="SearchContainer">
             <div className="row">

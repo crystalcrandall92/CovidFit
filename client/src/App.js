@@ -16,18 +16,14 @@ function App() {
 
           <Route exact path={["/", "/home"]} component={Home} />
 
-          <Route exact path={"/fitness"}>
-            <Fitness />
-          </Route>
-          <Route exact path={"/nutrition"}>
-            <Nutrition />
-          </Route>
-          <Route exact path={"/signup"}>
-            <Signup />
-          </Route>
-          <Route exact path={"/signin"}>
-            <Signin />
-          </Route>
+          <Route exact path={"/fitness"} component={Fitness} />
+
+          <Route exact path={"/nutrition"} component={Nutrition} />
+
+          <Route exact path={"/signup"} component={Signup} />
+
+          <Route exact path={"/signin"} component={Signin} />
+
           <Route>
             <NoMatch />
           </Route>

@@ -28,7 +28,6 @@ class Nutrition extends Component {
       console.log(this))
     } catch (error) {
       console.log(error)
-      console.log(this)
     }
   }
 
@@ -39,6 +38,7 @@ class Nutrition extends Component {
     Calories: searchedFood.nf_calories,
     Photo: searchedFood.photo ? searchedFood.photo.thumb : undefined
   })
+  
 
   handleInputChange = e =>
     this.setState({ [e.target.name]: e.target.value });
@@ -52,11 +52,10 @@ class Nutrition extends Component {
     try {
       await API.saveFood(searchedFood)
     } catch (error) {
-      console.warn(error)
-      console.log(this)
+      console.log(error)
     }
   }
-
+  
   render() {
     return (
       <div className="healthyFood">
