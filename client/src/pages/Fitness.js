@@ -3,26 +3,29 @@ import React, { Component } from "react";
 import Header from "../components/Header/Header";
 import Nav from "../components/Nav/Nav";
 import "../components/css/styles.css";
-//import API from "../utils/API";
-//import SearchContainer from "../components/SearchContainer";
+import BMIContainer from "../components/BMIContainer/BMIContainer";
+import SearchContainer from "../components/SearchContainer/SearchContainer";
+import API from "../utils/API";
 
 
 class Fitness extends Component {
   state = {
-    savedList: []
+    savedFoods: []
   }
   
-  //componentDidMount() {
-  //  API.savedList()
-  //  .then(savedList => this.setState({ savedList: savedList }))
-  //}
+  async componentDidMount() {
+    await API.savedFoods()
+    .then(savedFoods => this.setState({ savedFoods: savedFoods }))
+  }
+
   
   render() {
     return (
       <div className="naturerun">
         <Nav />
         <Header />
-        
+        <BMIContainer />
+        <h1>Your Calorie Count:</h1>
       </div>
     )
   }
