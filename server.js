@@ -1,4 +1,5 @@
 const express = require("express");
+const cp = require("cookie-parser")
 const mongoose = require("mongoose");
 const routes = require("./routes");
 
@@ -7,6 +8,31 @@ const routes = require("./routes");
 const PORT = process.env.PORT || 3001;
 require('dotenv').config({silent: true})
 const app = express();
+
+// Cookies
+app.use(cp())
+  //set cookies
+app.get('/set', (req, res) => {
+  // Set the new style cookie
+  res.cookie('3pcookie', 'value', { sameSite: 'none', secure: true });
+  // And set the same value in the legacy cookie
+  res.cookie('3pcookie-legacy', 'value', { secure: true });
+  res.end();
+});
+//get cookies
+app.get('/', (req, res) => {
+  let cookieVal = null;
+
+  if (req.cookies['3pcookie']) {
+    // check the new style cookie first
+    cookieVal = req.cookies['3pcookie'];
+  } else if (req.cookies['3pcookie-legacy']) {
+    // otherwise fall back to the legacy cookie
+    cookieVal = req.cookies['3pcookie-legacy'];
+  }
+
+  res.end();
+});
 
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));

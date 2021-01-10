@@ -3,11 +3,11 @@ import React from "react";
 function SearchContainer(props) {
     console.log(JSON.stringify(props) + "this is props")
     return (
-         <div className="SearchContainer">
+        <div className="SearchContainer">
             <div className="row">
                 <h1>Results:</h1>
                 {props.foods.map((result, i) => (
-                    <div className="card" key={i + "-search"}>
+                    <div className="card" key={i + "-food"}>
                         <div className="row">
                             <div className="col-md-2 center">
                                 {!!result.Photo && <img alt={result.Name} className="img-fluid" src={result.Photo} />}
@@ -20,12 +20,15 @@ function SearchContainer(props) {
                                     <p className="card-text">Calories: {result.Calories}</p>
                                     <p>Serving Size: {result.ServingSize}</p>
                                 </div>
+                                <button onClick={() => props.action(result)} className="SaveCalories" >
+                                    {props.method} Calories
+                                </button>
                             </div>
                         </div>
-                    </div>    
+                    </div>
 
                 ))}
-                </div>
+            </div>
         </div>
     )
 }

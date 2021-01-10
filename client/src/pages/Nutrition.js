@@ -14,7 +14,7 @@ class Nutrition extends Component {
   }
 
   componentDidMount() {
-    this.foodSearch('peanut butter')
+    this.foodSearch()
   }
 
   foodSearch = async search => {
@@ -48,11 +48,12 @@ class Nutrition extends Component {
     this.foodSearch(this.state.search);
   };
 
-  handleSavedFood = async food => {
+  handleSaveFood = async searchedFood => {
     try {
-      await API.saveFood(food)
+      await API.saveFood(searchedFood)
     } catch (error) {
       console.warn(error)
+      console.log(this)
     }
   }
 
@@ -64,7 +65,7 @@ class Nutrition extends Component {
         <SearchField className="centerform" search={this.state.search}
           handleInputChange={this.handleInputChange}
           handleFormSubmit={this.handleFormSubmit} />
-        <SearchContainer foods={this.state.foods} action={this.handleSavedFood} method="Save" />
+        <SearchContainer foods={this.state.foods} action={this.handleSaveFood} method="Save" />
       </div>
     )
   }
