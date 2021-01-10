@@ -9,7 +9,6 @@ const foodSchema = new Schema({
     ServingSize: { type: Array },
     Calories: { type: String },
     Photo: { type: String },
-    _id: { type: String }
 });
 
 const CovidFit = mongoose.model("Food", foodSchema);

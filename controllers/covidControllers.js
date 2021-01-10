@@ -3,6 +3,7 @@ const db = require("../models");
 // Defining methods for the FoodsController
 module.exports = {
   findAll: function(req, res) {
+    console.log("testing5")
     db.CovidFit
       .find(req.query)
       .sort({ date: -1 })

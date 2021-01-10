@@ -28,7 +28,6 @@ class Nutrition extends Component {
       console.log(this))
     } catch (error) {
       console.log(error)
-      console.log(this)
     }
   }
 
@@ -39,6 +38,7 @@ class Nutrition extends Component {
     Calories: searchedFood.nf_calories,
     Photo: searchedFood.photo ? searchedFood.photo.thumb : undefined
   })
+  
 
   handleInputChange = e =>
     this.setState({ [e.target.name]: e.target.value });
@@ -55,7 +55,7 @@ class Nutrition extends Component {
       console.log(error)
     }
   }
-
+  
   render() {
     return (
       <div className="healthyFood">
