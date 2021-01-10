@@ -13,11 +13,13 @@ export default {
     })
   },
   saveFood: function (saveData) {
-    return axios.get("/api/food", saveData)
+    console.log("testing it")
+    return axios.get("/api/covidfit", saveData)
     .then(result => result.data);
   },
   savedFoods: function () {
-    return axios.get("/api/food")
+    console.log("testing2")
+    return axios.get("/api/covidfit")
     .then(result => result.data);
   }
 };

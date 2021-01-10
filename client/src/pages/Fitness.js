@@ -4,13 +4,16 @@ import Header from "../components/Header/Header";
 import Nav from "../components/Nav/Nav";
 import "../components/css/styles.css";
 import BMIContainer from "../components/BMIContainer/BMIContainer";
-import SearchContainer from "../components/SearchContainer/SearchContainer";
+import SavedItems from "../components/SavedItems/SavedItems";
 import API from "../utils/API";
 
 
 class Fitness extends Component {
   state = {
-    savedFoods: []
+    value: "",
+    savedFoods: [],
+    foods: [],
+    basics: []
   }
   
   async componentDidMount() {
@@ -18,6 +21,14 @@ class Fitness extends Component {
     .then(savedFoods => this.setState({ savedFoods: savedFoods }))
   }
 
+  handleDeleteFoods = async food => {
+    try {
+      const res = await API.deleteFood(food._id);
+      this.setState({ savedFoods: this.state.savedFoods.filter(food => food._id !== res._id) })
+    } catch (error) {
+      console.warn(error)
+    }
+  }
   
   render() {
     return (
@@ -25,7 +36,7 @@ class Fitness extends Component {
         <Nav />
         <Header />
         <BMIContainer />
-        <h1>Your Calorie Count:</h1>
+        <SavedItems foods={this.state.savedFoods} action={this.handleDeleteFoods} method="Delete" color="danger"/>
       </div>
     )
   }

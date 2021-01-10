@@ -52,8 +52,7 @@ class Nutrition extends Component {
     try {
       await API.saveFood(searchedFood)
     } catch (error) {
-      console.warn(error)
-      console.log(this)
+      console.log(error)
     }
   }
 
