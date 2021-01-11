@@ -6,9 +6,11 @@ import "../components/css/styles.css";
 import BMIContainer from "../components/BMIContainer/BMIContainer";
 import SavedItems from "../components/SavedItems/SavedItems";
 import API from "../utils/API";
+import Total from "../components/Total/Total";
 
 
 class Fitness extends Component {
+
   state = {
     value: "",
     savedFoods: [],
@@ -36,7 +38,8 @@ class Fitness extends Component {
         <Nav />
         <Header />
         <BMIContainer />
-        <SavedItems foods={this.state.savedFoods} action={this.handleDeleteFoods} method="Delete" color="danger"/>
+        <SavedItems foods={this.state.savedFoods} action={this.handleDeleteFoods} method="Delete" />
+        <Total savedFoods={this.state.savedFoods} />
       </div>
     )
   }
