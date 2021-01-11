@@ -10,11 +10,14 @@ class BMIContainer extends React.Component {
     return (
         <div className="BMIContainer">
             <Helmet>
-                <meta charSet="utf-8" />
-                <title>My Title</title>
-                <link rel="canonical" href="http://mysite.com/example" />
-                <script type="text/javascript" async id="bmr-calculator" data-type="verywell-tool" data-vertical="verywellfit" src="https://www.verywellfit.com/static/4.190.0/components/tools/calculators/iframe-embed/embed.min.js?id=bmr-calculator"></script>
-            </Helmet>
+            <div class="omni-calculator" data-calculator="health/rmr" data-width="300" data-config='{"height":{"unitDefault":"ftinch"},"weight":{"unitDefault":"lb"}}' data-currency="USD" data-show-row-controls="false" data-version="3" data-t="1610331576680">
+  <div class="omni-calculator-header">RMR Calculator - Resting Metabolic Rate</div>
+  <div class="omni-calculator-footer">
+    <a href="https://www.omnicalculator.com/health/rmr" target="_blank" rel="noopener noreferrer"><img alt="Omni" class="omni-calculator-logo" src="https://cdn.omnicalculator.com/embed/omni-calculator-logo-long.svg" /></a>
+  </div>
+</div>
+<script async src="https://cdn.omnicalculator.com/sdk.js"></script>
+                </Helmet>
         </div>
     );
   }
