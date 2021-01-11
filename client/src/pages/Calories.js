@@ -17,10 +17,10 @@ class Fitness extends Component {
     foods: [],
     basics: []
   }
-  
+
   async componentDidMount() {
     await API.savedFoods()
-    .then(savedFoods => this.setState({ savedFoods: savedFoods }))
+      .then(savedFoods => this.setState({ savedFoods: savedFoods }))
   }
 
   handleDeleteFoods = async food => {
@@ -31,7 +31,7 @@ class Fitness extends Component {
       console.warn(error)
     }
   }
-  
+
   render() {
     return (
       <div className="naturerun">

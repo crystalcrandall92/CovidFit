@@ -6,7 +6,10 @@ const total = props.savedFoods.reduce(
 );
 
     return (
-        <p>Totals Calories: {total}</p>
+        <div  style={{width: "70%", margin: "0 auto", backgroundColor: "white" }}>
+          <p>Totals Calories Consumed: {total}</p>  
+        </div>
+        
     )
 }
 
