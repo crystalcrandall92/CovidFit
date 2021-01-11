@@ -44,11 +44,6 @@ app.get('/', (req, res) => {
 app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use(cors({
-//     origin: "http://localhost:3000", 
-//     credentials: true,
-//   })
-// );
 app.use(session({
   secret: "secretcode",
   resave: true,
