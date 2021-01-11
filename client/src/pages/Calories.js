@@ -9,6 +9,7 @@ import API from "../utils/API";
 import Total from "../components/Total/Total";
 
 
+
 class Fitness extends Component {
 
   state = {

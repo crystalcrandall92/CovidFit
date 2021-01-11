@@ -8,7 +8,7 @@ const AMR = {
 const BMR_Container = props => {
   const [state, setState] = React.useState({
     gender: "male",
-    weight: 180,
+    weight: "",
     height: 72,
     age: 25,
     amr: "Sedantary",
@@ -26,10 +26,10 @@ const BMR_Container = props => {
       }
     } else {
       BMR = {
-        base: 66.47,
-        weight: 13.75,
-        height: 5.003,
-        age: 6.755
+        base: 655.1,
+        weight: 9.563,
+        height: 1.850,
+        age: 4.676
       }
     }
 
@@ -39,7 +39,10 @@ const BMR_Container = props => {
     }))
   }, [state.gender, state.weight, state.height, state.amr])
 
-  return <div style={{width: "70%", margin: "0 auto", backgroundColor: "white" }}>{state.calories}</div>
+  return <div style={{width: "70%", margin: "0 auto", backgroundColor: "white" }}>
+    
+    {/* {state.calories} */}
+  </div>
 }
 
-export default BMR_Container
+export default BMR_Container 
