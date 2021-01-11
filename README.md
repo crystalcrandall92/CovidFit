@@ -31,8 +31,6 @@ To contribute to CovidFit, clone this repository locally and commit your code on
 
 ![image of App](images/covidfit.png)
 
-
-
 ### Questions and Contact Information Below
 Questions? Contact one of the crew!
 
@@ -43,4 +41,6 @@ Questions? Contact one of the crew!
 #### Email: shelbypkelly@gmail.com
 
 #### Github Username: byrdfabian
+
+https://docs.google.com/presentation/d/1s7TxegfTpouckXlUo6f_UoPq0O747pI7Lj5NpbdIT8k/edit?usp=sharing
 
