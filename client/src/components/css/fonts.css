@@ -9,4 +9,4 @@
 	     url('./FontPack/berkshireswash-regular.ttf') format('woff'), /* Modern Browsers */
 	     url('./FontPack/berkshireswash-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
 	     url('./FontPack/berkshireswash-regular.ttf') format('svg'); /* Legacy iOS */
-	}
+	};
