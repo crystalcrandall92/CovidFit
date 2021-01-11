@@ -9,6 +9,7 @@ import SearchContainer from "../components/SearchContainer/SearchContainer";
 class Nutrition extends Component {
   state = {
     value: "",
+    saveFood: [],
     foods: [],
     basics: []
   }

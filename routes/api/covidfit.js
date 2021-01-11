@@ -1,13 +1,13 @@
 const router = require("express").Router();
 const covidController = require("../../controllers/covidControllers");
 
-router.route("/api/covidfit")
+router.route("/")
   .get(covidController.findAll)
   .post(covidController.create);
 
 
 router
-  .route("/api/covidfit")
+  .route("/:id")
   .get(covidController.findById)
   .put(covidController.update)
   .delete(covidController.remove);
