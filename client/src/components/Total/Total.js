@@ -1,6 +1,7 @@
 import React from "react";
 
 const Total = (props) => {
+
 const total = props.savedFoods.reduce(
     (previousScore, currentValue) => parseInt(previousScore) + parseInt(currentValue.Calories), 0
 );
