@@ -3,7 +3,8 @@ const db = require("../models");
 // Defining methods for the FoodsController
 module.exports = {
   findAll: function(req, res) {
-    db.Food
+    console.log("testing5")
+    db.CovidFit
       .find(req.query)
       .sort({ date: -1 })
       .then(dbModel => res.json(dbModel))
@@ -13,7 +14,7 @@ module.exports = {
       });
   },
   findById: function(req, res) {
-    db.Food
+    db.CovidFit
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => {
@@ -22,7 +23,7 @@ module.exports = {
       });
   },
   create: function(req, res) {
-    db.Food
+    db.CovidFit
       .create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => {
@@ -31,7 +32,7 @@ module.exports = {
       });
   },
   update: function(req, res) {
-    db.Food
+    db.CovidFit
       .findOneAndUpdate({ _id: req.params.id }, req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => {
@@ -40,7 +41,7 @@ module.exports = {
       });
   },
   remove: function(req, res) {
-    db.Food
+    db.CovidFit
       .findById({ _id: req.params.id })
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))

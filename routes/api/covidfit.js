@@ -5,6 +5,7 @@ router.route("/")
   .get(covidController.findAll)
   .post(covidController.create);
 
+
 router
   .route("/:id")
   .get(covidController.findById)

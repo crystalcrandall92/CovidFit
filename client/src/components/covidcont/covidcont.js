@@ -4,7 +4,7 @@ import "../css/styles.css";
 
 function covidcont(props) {
     console.log(props.data)
-    return (<div style={{width: "70%", margin: "0 auto"}} class="homechartbox">
+    return (<div style={{width: "70%", margin: "0 auto"}}>
         { props.data.length > 0 && <table style={{ width: "100%", backgroundColor: "white" }}>
             <thead>
                 <tr>

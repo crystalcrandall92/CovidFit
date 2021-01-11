@@ -36,6 +36,11 @@
     font-family: 'Lora', serif;
   }
 
+  h1 {
+ font-family: 'Lora', serif;
+ color: black;
+  }
+
   .homebox {
     padding: 20px;
   }
@@ -74,4 +79,13 @@
     background-image: url("./healthyFood.jpg");
       background-size: cover;
       height: 100vh;
+  }
+
+  .SearchContainer {
+    overflow: auto;
+    height: 60%;
+    width: 50%;
+    margin: 50px 200px 200px 200px;
+    padding: 0px 50px 50px 50px;
+    background-color: rgb(202, 194, 172, .4);
   }
