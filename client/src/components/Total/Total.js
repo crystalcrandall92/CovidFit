@@ -1,15 +1,16 @@
 import React from "react";
 
 const Total = (props) => {
-    const string = JSON.stringify(props.savedFoods)
-    const total = string.reduce(
-    (previousScore, currentValue) => previousScore + currentValue.Calories, 0
+
+const total = props.savedFoods.reduce(
+    (previousScore, currentValue) => parseInt(previousScore) + parseInt(currentValue.Calories), 0
 );
 
-console.log(string)
-
     return (
-        <p>Totals Calories: {total}</p>
+        <div  style={{width: "70%", margin: "0 auto", backgroundColor: "white" }}>
+          <p>Totals Calories Consumed: {total}</p>  
+        </div>
+        
     )
 }
 

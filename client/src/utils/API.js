@@ -18,8 +18,11 @@ export default {
     .then(result => result.data);
   },
   savedFoods: function () {
-    console.log("testing2")
     return axios.get("/api/covidfit")
     .then(result => result.data);
-  }
+  },
+  deleteFood: function(id) {
+    return axios.delete("/api/covidfit/" + id)
+    .then(result => result.data);
+  },
 };

@@ -1,11 +1,15 @@
 import React from "react";
+import DayJS from 'react-dayjs';
 import "../css/styles.css";
 
 
 function covidcont(props) {
     console.log(props.data)
-    return (<div style={{width: "70%", margin: "0 auto"}} class="homechartbox">
+    return (<div style={{width: "70%", margin: "0 auto", backgroundColor: "white" }}>
+        <p>Stats for USA as of: <DayJS format={"dddd , MMMM D YYYY"}></DayJS></p>
+         <p></p>
         { props.data.length > 0 && <table style={{ width: "100%", backgroundColor: "white" }}>
+       
             <thead>
                 <tr>
                     {
