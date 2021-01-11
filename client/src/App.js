@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import Fitness from "./pages/Fitness";
+import Calories from "./pages/Calories";
 import NoMatch from "./pages/NoMatch";
 import Nutrition from "./pages/Nutrition";
 import Signup from "./pages/Signup";
@@ -16,7 +16,7 @@ function App() {
 
           <Route exact path={["/", "/home"]} component={Home} />
 
-          <Route exact path={"/fitness"} component={Fitness} />
+          <Route exact path={"/calories"} component={Calories} />
 
           <Route exact path={"/nutrition"} component={Nutrition} />
 

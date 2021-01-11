@@ -1,26 +1,45 @@
 import React from "react";
-import {Helmet} from "react-helmet";
-import 'react-widgets/dist/css/react-widgets.css';
 
- 
-class BMIContainer extends React.Component {
+const AMR = {
+  "Sedantary": 1.2,
+  "Active": 1.725
+}
 
+const BMR_Container = props => {
+  const [state, setState] = React.useState({
+    gender: "male",
+    weight: 180,
+    height: 72,
+    age: 25,
+    amr: "Sedantary",
+    calories: null
+  })
 
-  render () {
-    return (
-        <div className="BMIContainer">
-            <Helmet>
-            <div class="omni-calculator" data-calculator="health/rmr" data-width="300" data-config='{"height":{"unitDefault":"ftinch"},"weight":{"unitDefault":"lb"}}' data-currency="USD" data-show-row-controls="false" data-version="3" data-t="1610331576680">
-  <div class="omni-calculator-header">RMR Calculator - Resting Metabolic Rate</div>
-  <div class="omni-calculator-footer">
-    <a href="https://www.omnicalculator.com/health/rmr" target="_blank" rel="noopener noreferrer"><img alt="Omni" class="omni-calculator-logo" src="https://cdn.omnicalculator.com/embed/omni-calculator-logo-long.svg" /></a>
-  </div>
-</div>
-<script async src="https://cdn.omnicalculator.com/sdk.js"></script>
-                </Helmet>
-        </div>
-    );
-  }
-};
+  React.useEffect(() => {
+    let BMR;
+    if (state.gender === "male") {
+      BMR = {
+        base: 66.47,
+        weight: 13.75,
+        height: 5.003,
+        age: 6.755
+      }
+    } else {
+      BMR = {
+        base: 66.47,
+        weight: 13.75,
+        height: 5.003,
+        age: 6.755
+      }
+    }
 
-export default BMIContainer;
+    setState(state => ({
+      ...state,
+      calories: Math.floor(AMR[state.amr] * (BMR.base + (BMR.weight * (state.weight * .45359)) + (BMR.height * (state.height * 2.54)) - (BMR.age * state.age)))
+    }))
+  }, [state.gender, state.weight, state.height, state.amr])
+
+  return <div style={{width: "70%", margin: "0 auto", backgroundColor: "white" }}>{state.calories}</div>
+}
+
+export default BMR_Container
