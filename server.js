@@ -2,13 +2,14 @@ const express = require("express");
 const cp = require("cookie-parser")
 const mongoose = require("mongoose");
 const routes = require("./routes");
-
+const helmet = require("helmet");
 
 // connects the port to this or .env.PORT
 const PORT = process.env.PORT || 3001;
 require('dotenv').config({silent: true})
 const app = express();
 
+app.use(helmet());
 // Cookies
 app.use(cp())
   //set cookies

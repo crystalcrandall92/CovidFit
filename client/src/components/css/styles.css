@@ -4,7 +4,7 @@
     text-align: center;
     font-size: 80px;
     color: white;
-    font-family: 'Lobster', cursive;
+    font-family: 'berkshireswash-regular', cursive;
   }
 
   .center {
@@ -70,7 +70,7 @@
   }
 
   .naturerun {
-    background-image: url("./naturerun.jpg");
+    background-image: url("./set-healthy-lifestyle-objects.jpg");
       background-size: cover;
       height: 100vh;
   }

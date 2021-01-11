@@ -1,15 +1,38 @@
 {
-  "name": "google-books",
+  "name": "covid-fit",
   "version": "0.1.0",
-  "description": "Google Books",
+  "description": "Covid Fit",
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "@babel/register": "^7.12.10",
+    "@babel/runtime": "^7.12.5",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "dayjs": "^1.10.3",
     "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "helmet": "^4.3.1",
+    "if-env": "^1.0.4",
+    "jquery": "^3.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.11",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
     "react": "^16.6.3",
+    "react-bootstrap": "^0.32.4",
+    "react-cookie": "^4.0.3",
+    "react-dayjs": "^0.2.1",
     "react-dom": "^16.6.3",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^5.0.1",
-    "react-scripts": "^2.1.1"
+    "react-script-tag": "^1.1.2",
+    "react-scripts": "^2.1.1",
+    "react-widgets": "^5.0.0-beta.22",
+    "validator": "^13.5.2"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -22,5 +45,11 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/node": "^7.12.10",
+    "@babel/preset-env": "^7.12.11"
+  }
 }

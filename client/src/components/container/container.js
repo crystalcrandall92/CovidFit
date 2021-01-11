@@ -3,8 +3,10 @@ import "../css/styles.css";
 
 function container() {
   return (
-    <div style={{ backgroundColor: "white", width: "70%", margin: "0 auto" }} class="homebox">
-      <p>As Covid-19 numbers rise it is our responsibility to do our due diligence in helping to prevent the spread. Though while doing so we also need to be even more aware of the lack of exercise as many places are shut down and many people work from home.</p>
+    <div style={{ backgroundColor: "white", width: "70%", margin: "0 auto" }}>
+      <p>Here at Covid-Fit, we understand the need for social distancing and staying safe not only for our friends and family but for ourselves as well. While most of us are staying home and limiting our time outside this can lead to less movement overall, thus slowly putting on post Covid weight.</p>
+      <p>We have designed a way for users to take their weight, height, and age to help calculate the number of calories their body burns and needs on a daily basis and compare it to how much and what they are consuming. We hope to help people to be able to be more food conscious as we are continuing to social distance.</p>
+      <p>We have included items that a user would eat from home or if they were to pick something up at a restaurant.</p>
     </div>
   );
 }
