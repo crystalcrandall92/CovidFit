@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const db = require("../models");
 
+
 // This file empties the Foods collection and inserts the Foods below
 
 mongoose.connect(
