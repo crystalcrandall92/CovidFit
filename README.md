@@ -41,6 +41,7 @@ Questions? Contact one of the crew!
 #### Email: shelbypkelly@gmail.com
 
 #### Github Username: byrdfabian
+#### Email: fabianbyrd@gmail.com
 
 https://docs.google.com/presentation/d/1s7TxegfTpouckXlUo6f_UoPq0O747pI7Lj5NpbdIT8k/edit?usp=sharing
 
