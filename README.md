@@ -5,7 +5,8 @@
 2. [Installation](#installation-instructions)
 3. [Usage](#usage-information)
 4. [Contribution](#contribution-guidelines)
-5. [Questions & Contact](#questions-and-contact-information-below)
+5. [Image of Application](#image-of-application)
+6. [Questions & Contact](#questions-and-contact-information-below)
 
 ### Description
 Due to the Covid-19 pandemic, weight gain is an issue on the rise. CovidFit is designed to help you keep track of the current Covid-19 statistics and plan your meals accordingly. On our Nutrition page, you can look up any food item and store your daily calorie intake. Then, on the Calories page, your intake is listed by item and you are able to calculate your BMR. Sign up or Log in now!
