@@ -18,7 +18,8 @@
 ### Contribution Guidelines
 
 ### Image of Application
-![](images/covidfit.png)
+
+![image of App](images/covidfit.png)
 
 
 
