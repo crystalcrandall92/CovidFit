@@ -17,6 +17,9 @@
 
 ### Contribution Guidelines
 
+### Image of Application
+![]CovidFit/images/covidfit.png
+
 ### Questions and Contact Information Below
 #### Github Username: crystalcrandall92
 #### Github Link: 
