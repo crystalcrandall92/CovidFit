@@ -1,3 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital@1&display=swap');
+
+@font-face {
+	font-family: 'berkshireswash-regular';
+	src: url('./FontPack/berkshireswash-regular.ttf'); /* IE9 Compat Modes */
+	src: url('./FontPack/berkshireswash-regular.ttf') format('embedded-opentype'), /* IE6-IE8 */
+	     url('./FontPack/berkshireswash-regular.ttf') format('woff'), /* Modern Browsers */
+	     url('./FontPack/berkshireswash-regular.ttf')  format('truetype'), /* Safari, Android, iOS */
+	     url('./FontPack/berkshireswash-regular.ttf') format('svg'); /* Legacy iOS */
+	}
