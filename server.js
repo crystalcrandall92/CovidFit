@@ -1,18 +1,23 @@
 const express = require("express");
 const cp = require("cookie-parser")
 const mongoose = require("mongoose");
-const routes = require("./routes");
+const cors = require('cors');
+const passport = require('./config/passport')
+const cookieParser = require("cookie-parser")
+
+const session = require("express-session")
+const bodyParser = require("body-parser")
 const helmet = require("helmet");
 
 // connects the port to this or .env.PORT
 const PORT = process.env.PORT || 3001;
-require('dotenv').config({silent: true})
+require('dotenv').config({ silent: true })
 const app = express();
 
 app.use(helmet());
 // Cookies
 app.use(cp())
-  //set cookies
+//set cookies
 app.get('/set', (req, res) => {
   // Set the new style cookie
   res.cookie('3pcookie', 'value', { sameSite: 'none', secure: true });
@@ -36,16 +41,31 @@ app.get('/', (req, res) => {
 });
 
 // Define middleware here
+app.use(bodyParser.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+// app.use(cors({
+//     origin: "http://localhost:3000", 
+//     credentials: true,
+//   })
+// );
+app.use(session({
+  secret: "secretcode",
+  resave: true,
+  saveUnitialized: true
+}))
+app.use(cookieParser("secretcode"));
+app.use(passport.initialize());
+app.use(passport.session());
+require("./controllers/userControllers")(passport);
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/public"));
 }
 
-// Define API routes here
-app.use(routes)
+// Define API routes here 
+app.use(require("./routes"))
 
 // Connect to the Mongo DB
 mongoose.connect(process.env.ATLAS_URI || { useNewUrlParser: true });

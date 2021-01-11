@@ -1,22 +1,48 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import Header from "../components/Header/Header";
 import Nav from "../components/Nav/Nav";
-import SigninField from "../components/SigninField/SigninField";
+import Axios from "axios";
 import "../components/css/styles.css"
 
-// setting state to value and books
-class Signin extends Component {
+function Signin() {
+  const [loginUsername, setLoginUsername] = useState("");
+  const [loginPassword, setLoginPassword] = useState("");
 
-  render() {
-    return (
-      <div className="signinbg">
-        <Nav />
-        <Header />
-        <SigninField />
+  const login = () => {
+    Axios({
+      method: "POST",
+      data: {
+        username: loginUsername,
+        password: loginPassword,
+      },
+      withCredentials: true,
+      url: "/auth/login",
+    }).then((res) => console.log(res));
+  };
+  return (
+    <div className="signinbg">
+      <Nav />
+      <Header />
+      <div style={{ width: "70%", margin: "0 auto", backgroundColor: "white", textAlign: "center" }}>
+        <h1>Login</h1>
+        <div>
+          <input
+            placeholder="username"
+            onChange={(e) => setLoginUsername(e.target.value)}
+          />
+        </div>
+        <div>
+          <input
+            placeholder="password"
+            onChange={(e) => setLoginPassword(e.target.value)}
+          />
+        </div>
+        <button onClick={login} >Submit</button>
       </div>
-    )
-  }
+    </div>
+  )
 }
+
 
 
 

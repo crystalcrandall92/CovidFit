@@ -6,8 +6,8 @@ function Nav() {
       <a className="navbar-brand" href="/">
         Covid-Fit
       </a>
-      <a className="navbar-brand" href="/fitness">
-        Fitness
+      <a className="navbar-brand" href="/Calories">
+        Calories
       </a>
       <a className="navbar-brand" href="/nutrition">
         Nutrition

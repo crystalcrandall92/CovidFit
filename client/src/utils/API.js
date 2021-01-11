@@ -21,8 +21,8 @@ export default {
     return axios.get("/api/covidfit")
     .then(result => result.data);
   },
-  // deleteFood: function(id) {
-  //   return axios.delete("/api/covidfit/" + id)
-  //   .then(result => result.data);
-  // },
+  deleteFood: function(id) {
+    return axios.delete("/api/covidfit/" + id)
+    .then(result => result.data);
+  },
 };
