@@ -13,8 +13,8 @@ export default {
     })
   },
   saveFood: function (saveData) {
-    console.log("testing it")
-    return axios.get("/api/covidfit", saveData)
+    console.log(saveData)
+    return axios.post("/api/covidfit", saveData)
     .then(result => result.data);
   },
   savedFoods: function () {

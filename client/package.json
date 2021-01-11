@@ -1,7 +1,7 @@
 {
-  "name": "google-books",
+  "name": "covid-fit",
   "version": "0.1.0",
-  "description": "Google Books",
+  "description": "Covid Fit",
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {

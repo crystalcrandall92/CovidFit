@@ -5,7 +5,6 @@ function SearchContainer(props) {
     return (
         <div className="SearchContainer">
             <div className="row">
-                <h1>Results:</h1>
                 {props.foods.map((result, i) => (
                     <div className="card" key={i + "-food"}>
                         <div className="row">

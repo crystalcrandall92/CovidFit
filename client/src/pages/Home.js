@@ -21,11 +21,10 @@ class Home extends Component {
 
   catchCOVID = async () => {
     const createdData = (covidData) => ({
-      Positive: covidData.positive,
-      Negative: covidData.negative,
+      "Positive Cases": covidData.positive,
+      "Negative Cases": covidData.negative,
       "Hospitalized Currently": covidData.hospitalizedCurrently,
       "ICU Currently": covidData.inIcuCurrently,
-      Recovered: covidData.recovered,
       Death: covidData.death,
       "Death Increase": covidData.deathIncrease,
     })
