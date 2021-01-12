@@ -7,24 +7,22 @@ const cookieParser = require("cookie-parser")
 
 const session = require("express-session")
 const bodyParser = require("body-parser")
-const helmet = require("helmet");
 
 // connects the port to this or .env.PORT
 const PORT = process.env.PORT || 3001;
 require('dotenv').config({ silent: true })
 const app = express();
 
-app.use(helmet());
 // Cookies
 app.use(cp())
 //set cookies
-app.get('/set', (req, res) => {
-  // Set the new style cookie
-  res.cookie('3pcookie', 'value', { sameSite: 'none', secure: true });
-  // And set the same value in the legacy cookie
-  res.cookie('3pcookie-legacy', 'value', { secure: true });
-  res.end();
-});
+// app.get('/set', (req, res) => {
+//   // Set the new style cookie
+//   res.cookie('3pcookie', 'value', { sameSite: 'none', secure: true });
+//   // And set the same value in the legacy cookie
+//   res.cookie('3pcookie-legacy', 'value', { secure: true });
+//   res.end();
+// });
 //get cookies
 // app.get('/', (req, res) => {
 //   let cookieVal = null;
