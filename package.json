@@ -12,6 +12,9 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build"
   },
+  "engines": {    
+    "node": "12.18.3",    
+    "npm": "6.14.6"  },
   "author": "",
   "license": "ISC",
   "devDependencies": {
