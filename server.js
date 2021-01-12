@@ -26,19 +26,19 @@ app.get('/set', (req, res) => {
   res.end();
 });
 //get cookies
-app.get('/', (req, res) => {
-  let cookieVal = null;
+// app.get('/', (req, res) => {
+//   let cookieVal = null;
 
-  if (req.cookies['3pcookie']) {
-    // check the new style cookie first
-    cookieVal = req.cookies['3pcookie'];
-  } else if (req.cookies['3pcookie-legacy']) {
-    // otherwise fall back to the legacy cookie
-    cookieVal = req.cookies['3pcookie-legacy'];
-  }
+//   if (req.cookies['3pcookie']) {
+//     // check the new style cookie first
+//     cookieVal = req.cookies['3pcookie'];
+//   } else if (req.cookies['3pcookie-legacy']) {
+//     // otherwise fall back to the legacy cookie
+//     cookieVal = req.cookies['3pcookie-legacy'];
+//   }
 
-  res.end();
-});
+//   res.end();
+// });
 
 // Define middleware here
 app.use(bodyParser.json());
