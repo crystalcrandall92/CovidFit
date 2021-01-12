@@ -1,6 +1,5 @@
 {
   "name": "covid-fit",
-  "homepage": "",
   "version": "1.0.0",
   "description": "Covid Fit",
   "main": "server.js",
@@ -10,8 +9,7 @@
     "start:dev": "concurrently -k \"nodemon --ignore 'client/*'\" \"npm run client\"",
     "client": "cd client && npm run start",
     "install": "cd client && npm install",
-    "build": "cd client && npm run build",
-    "heroku-postbuild": "npm run build"
+    "build": "cd client && npm run build"
   },
   "engines": {    
     "node": "12.18.3",    
@@ -48,3 +46,5 @@
     "react-widgets": "^5.0.0-beta.22"
   }
 }
+
+
